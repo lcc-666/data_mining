@@ -1,7 +1,7 @@
 package KNN;
 import java.util.ArrayList;
 /*
- * Ö÷º¯Êı KNN
+ * ä¸»å‡½æ•° KNN
  */
 public class TestJava {
   static ArrayList< PointBean> listA;
@@ -9,61 +9,61 @@ public class TestJava {
   static ArrayList< PointBean> listC;
   static ArrayList< PointBean> listD;
   public static void main(String[] args) {
-    //´´½¨Arraylist
+    //åˆ›å»ºArraylist
     listA=new ArrayList<PointBean>();
     listB=new ArrayList<PointBean>();
     listC=new ArrayList<PointBean>();
     listD=new ArrayList<PointBean>();
-    //¸øArraylistĞ´ÈëÊı¾İ
+    //ç»™Arraylistå†™å…¥æ•°æ®
     setDate();
     getTestResult();
   }
   /**
-   * µÃµ½½á¹û
+   * å¾—åˆ°ç»“æœ
    */
   private static void getTestResult() {
-    //´´½¨¶ÔÏó
+    //åˆ›å»ºå¯¹è±¡
     KnnMain km=new KnnMain();
     for(int i=0;i<listD.size();i++){
       km.getContent(listA, listB, listC, listD.get(i));
     }
   }
   /**
-   * Ğ´ÈëÊı¾İ
+   * å†™å…¥æ•°æ®
    */
   private static void setDate() {
-    //AµÄ×ø±êµã,¼´AÀàµÄµãÓĞ£¨1£¬0£©£¬£¨1£¬1£©£¬£¨2£¬1£©£¬£¨2,0),(1,2)Îå¸öµã
+    //Açš„åæ ‡ç‚¹,å³Aç±»çš„ç‚¹æœ‰ï¼ˆ1ï¼Œ0ï¼‰ï¼Œï¼ˆ1ï¼Œ1ï¼‰ï¼Œï¼ˆ2ï¼Œ1ï¼‰ï¼Œï¼ˆ2,0),(1,2)äº”ä¸ªç‚¹
     int A_x[]={1,1,2,2,1};
     int A_y[]={0,1,1,0,2};
-    //BµÄ×ø±êµã
+    //Bçš„åæ ‡ç‚¹
     int B_x[]={2,3,3,3,4};
     int B_y[]={4,4,3,2,3};
-    //CµÄ×ø±êµã
+    //Cçš„åæ ‡ç‚¹
     int C_x[]={4,5,5,6,6};
     int C_y[]={1,2,0,2,1};
-    // ²âÊÔÊı¾İ£¬²âÊÔDÖĞÎå¸öµã·Ö±ğÊôÓÚÄÄÒ»Àà
-    //DµÄ×ø±êµã
+    // æµ‹è¯•æ•°æ®ï¼Œæµ‹è¯•Dä¸­äº”ä¸ªç‚¹åˆ†åˆ«å±äºå“ªä¸€ç±»
+    //Dçš„åæ ‡ç‚¹
     int D_x[]={3,3,3,0,5};
     int D_y[]={0,1,5,0,1};
-    //°ÑAÀàµã·ÅÈëlistA
+    //æŠŠAç±»ç‚¹æ”¾å…¥listA
     PointBean bA;
     for(int i=0;i<5;i++){
       bA=new PointBean(A_x[i], A_y[i]);
       listA.add(bA);
     }
-    //°ÑBÀàµã·ÅÈëlistB
+    //æŠŠBç±»ç‚¹æ”¾å…¥listB
     PointBean bB ;
     for(int i=0;i<5;i++){
       bB=new PointBean(B_x[i], B_y[i]);
       listB.add(bB);
     }
-    //°ÑCÀàµã·ÅÈëlistC
+    //æŠŠCç±»ç‚¹æ”¾å…¥listC
     PointBean bC ;
     for(int i=0;i<5;i++){
       bC=new PointBean(C_x[i], C_y[i]);
       listC.add(bC);
     }
-    //°ÑDÖĞµã·ÅÈëlistD
+    //æŠŠDä¸­ç‚¹æ”¾å…¥listD
     PointBean bD ;
     for(int i=0;i<5;i++){
       bD=new PointBean(D_x[i], D_y[i]);

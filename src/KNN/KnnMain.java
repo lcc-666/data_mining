@@ -1,7 +1,7 @@
 package KNN;
 import java.util.ArrayList;
 /**
- * KNNÊµÏÖµÄ·½·¨£¬´ËËã·¨Ïàµ±ÓÚK=1£¬×îºóÕÒµ½Àë²âÊÔµã×î½üµÄÄ³µãp£¬pÊôÓÚÄÄÒ»Àà£¬²âÊÔµã¾ÍÊôÓÚÄÄÒ»Àà
+ * KNNå®ç°çš„æ–¹æ³•ï¼Œæ­¤ç®—æ³•ç›¸å½“äºK=1ï¼Œæœ€åæ‰¾åˆ°ç¦»æµ‹è¯•ç‚¹æœ€è¿‘çš„æŸç‚¹pï¼Œpå±äºå“ªä¸€ç±»ï¼Œæµ‹è¯•ç‚¹å°±å±äºå“ªä¸€ç±»
  * @author Administrator
  *
  */
@@ -11,7 +11,7 @@ public class KnnMain {
     int b_y=bb.getY();
     double temp=(b_x -list.get(0).getX())*(b_x -list.get(0).getX())+
         (b_y -list.get(0).getY())*(b_y -list.get(0).getY());
-    // ÕÒ³ö×îĞ¡µÄ¾àÀë
+    // æ‰¾å‡ºæœ€å°çš„è·ç¦»
     for(int i=1;i<list.size();i++){
       if(temp<((b_x -list.get(i).getX())*(b_x -list.get(i).getX())+
           (b_y -list.get(i).getY())*(b_y -list.get(i).getY()))){
@@ -22,7 +22,7 @@ public class KnnMain {
     return Math.sqrt(temp);
   }
   /**
-   * »ñÈ¡³¤¶È£¬ÕÒ³ö×îĞ¡µÄÒ»¸ö½øĞĞ¹éÀà
+   * è·å–é•¿åº¦ï¼Œæ‰¾å‡ºæœ€å°çš„ä¸€ä¸ªè¿›è¡Œå½’ç±»
    * @param list1
    * @param list2
    * @param list3
@@ -30,21 +30,21 @@ public class KnnMain {
    */
   public void getContent(ArrayList<PointBean> list1,ArrayList<PointBean> list2,
       ArrayList<PointBean> list3,PointBean bb){
-    double A=getPointLength(list1,bb);//ÓëAÀàµãÖĞµÄ×î½ü¾àÀë
-    double B=getPointLength(list2,bb);//ÓëBÀàµãÖĞµÄ×î½ü¾àÀë
-    double C=getPointLength(list3,bb);//ÓëCÀàµãÖĞµÄ×î½ü¾àÀë
-    //×ö³ö±È½Ï
+    double A=getPointLength(list1,bb);//ä¸Aç±»ç‚¹ä¸­çš„æœ€è¿‘è·ç¦»
+    double B=getPointLength(list2,bb);//ä¸Bç±»ç‚¹ä¸­çš„æœ€è¿‘è·ç¦»
+    double C=getPointLength(list3,bb);//ä¸Cç±»ç‚¹ä¸­çš„æœ€è¿‘è·ç¦»
+    //åšå‡ºæ¯”è¾ƒ
     if(A>B){
       if(B>C){
-        System.out.println("Õâ¸öµã:"+bb.getX()+" , "+bb.getY()+" " +"ÊôÓÚC");
+        System.out.println("è¿™ä¸ªç‚¹:"+bb.getX()+" , "+bb.getY()+" " +"å±äºC");
       }else {
-        System.out.println("Õâ¸öµã:"+bb.getX()+" , "+bb.getY()+" " +"ÊôÓÚB");
+        System.out.println("è¿™ä¸ªç‚¹:"+bb.getX()+" , "+bb.getY()+" " +"å±äºB");
       }
     }else {
       if(A>C){
-        System.out.println("Õâ¸öµã:"+bb.getX()+" , "+bb.getY()+" " +"ÊôÓÚC");
+        System.out.println("è¿™ä¸ªç‚¹:"+bb.getX()+" , "+bb.getY()+" " +"å±äºC");
       }else {
-        System.out.println("Õâ¸öµã:"+bb.getX()+" , "+bb.getY()+" " +"ÊôÓÚA");
+        System.out.println("è¿™ä¸ªç‚¹:"+bb.getX()+" , "+bb.getY()+" " +"å±äºA");
       }
     }
   }

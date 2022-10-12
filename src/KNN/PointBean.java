@@ -1,6 +1,6 @@
 package KNN;
 /**
- * µãµÄ×ø±ê x ¡¢y
+ * ç‚¹çš„åæ ‡ x ã€y
  * @author Administrator
  *
  */

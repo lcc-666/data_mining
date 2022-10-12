@@ -192,7 +192,7 @@ public class Apriori {
     public static void main(String[] args) {
         Apriori apriori =new Apriori();
         Map<String,Integer> frequenCollectionMap=apriori.getFC();
-        System.out.println("---------------存在强关联规则如下"+"-------");
+        System.out.println("---------------存在关联规则如下"+"-------");
         Set<String> fcKeySet=frequenCollectionMap.keySet();
         for (String fcKey:fcKeySet){
             System.out.println(fcKey+"    :      "+frequenCollectionMap.get(fcKey));
